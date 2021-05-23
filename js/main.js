@@ -29,7 +29,7 @@ function initApp () {
     clear.addEventListener('keydown', clearPushListner);
     search.addEventListener('input', showClearTextButton);
     form.addEventListener('click', submitTheSearch);
-    form.addEventListener('change', inputSearchSubmit);
+    form.addEventListener('input', inputSearchSubmit);
 }
 
 function inputSearchSubmit () {
