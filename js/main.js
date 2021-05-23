@@ -32,7 +32,7 @@ function initApp () {
     form.addEventListener('input', inputSearchSubmit);
 }
 
-function inputSearchSubmit () {
+function inputSearchSubmit (e) {
     e.preventDefault();
     procesTheSearch();
     setSearchFocus();
