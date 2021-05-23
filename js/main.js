@@ -32,12 +32,17 @@ function initApp () {
     form.addEventListener('input', inputSearchSubmit);
 }
 
-function inputSearchSubmit (e) {
-    e.preventDefault();
+function inputSearchSubmit () {
     procesTheSearch();
     setSearchFocus();
 }
 
+function trhrotting () {
+    setTimeout(() => {
+        deleteSearchResults()
+        inputSearchSubmit();
+    }, 1000);
+}
 function submitTheSearch (e) {
     e.preventDefault();
     deleteSearchResults();
