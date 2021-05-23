@@ -28,7 +28,14 @@ function initApp () {
     clear.addEventListener('click', clearSearchText);
     clear.addEventListener('keydown', clearPushListner);
     search.addEventListener('input', showClearTextButton);
-    form.addEventListener('input', submitTheSearch);
+    form.addEventListener('click', submitTheSearch);
+    form.addEventListener('change', inputSearchSubmit);
+}
+
+function inputSearchSubmit () {
+    e.preventDefault();
+    procesTheSearch();
+    setSearchFocus();
 }
 
 function submitTheSearch (e) {
