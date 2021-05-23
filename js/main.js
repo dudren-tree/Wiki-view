@@ -17,7 +17,7 @@ document.addEventListener('readystatechange', (event) => {
         initApp ();
     }
 });
-
+///addEventsForPhones
 function initApp () {
     setSearchFocus();
 
