@@ -29,7 +29,7 @@ function initApp () {
     clear.addEventListener('keydown', clearPushListner);
     search.addEventListener('input', showClearTextButton);
     form.addEventListener('click', submitTheSearch);
-    form.addEventListener('input', inputSearchSubmit);
+    form.addEventListener('input', debouncing);
 }
 
 function inputSearchSubmit () {
@@ -37,7 +37,7 @@ function inputSearchSubmit () {
     setSearchFocus();
 }
 
-function trhrotting () {
+function debouncing () {
     setTimeout(() => {
         deleteSearchResults()
         inputSearchSubmit();
