@@ -26,10 +26,13 @@ function initApp () {
     const form = document.getElementById('searchBar');
     
     clear.addEventListener('click', clearSearchText);
+    clear.addEventListener('touchstart', clearSearchText)
     clear.addEventListener('keydown', clearPushListner);
     search.addEventListener('input', showClearTextButton);
+    search.addEventListener('touchstart', showClearTextButton);
     form.addEventListener('click', submitTheSearch);
-    form.addEventListener('input', debouncing);
+    form.addEventListener('keydown', debouncing);
+//     form.addEventListener('input', debouncing);
 }
 
 function inputSearchSubmit () {
